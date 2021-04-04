@@ -11,7 +11,6 @@ public class WhileKeyControlExam {
 		
 		while(run) {
 			if(keyCode != 13 && keyCode != 10) {
-				System.out.println();
 				System.out.println("-------------");
 				System.out.println("1. 증속 | 2. 감속 | 3.중지");
 				System.out.println("-------------");
