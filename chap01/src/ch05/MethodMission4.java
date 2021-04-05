@@ -3,10 +3,10 @@ public class MethodMission4 {
 
 	public static void main(String[] args) {
 		
-		int rNum = getRandomNum(); // 0~9
-		System.out.println(rNum); //
+//		int rNum = getRandomNum(); // 0~9
+//		System.out.println(rNum); //
 		
-		System.out.println(getRandomNum(20));
+//		System.out.println(getRandomNum(20));
 		
 		System.out.println(getRandomNum(5, 10));  //5~10
 	}
@@ -24,7 +24,7 @@ public class MethodMission4 {
 			max = min;
 			min = temp;
 		}
-		int random = (int)(Math.random()*(max-min))+min;
+		int random = (int)(Math.random()*(max-min+1))+min;
 		return random;
 	}
 	
@@ -32,4 +32,3 @@ public class MethodMission4 {
 		return (int)(Math.random()*10);
 	}
 }
-//git test
