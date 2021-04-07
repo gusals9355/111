@@ -30,10 +30,11 @@ public class MethodMission10 {
 			
 			drinkArr[i] = drink;
 		}
-		System.out.println("<메뉴>");
+		String str = "<메뉴>\n0. 종료\n";
 		for(int i=0; i<drinkArr.length; i++) {
 			Drink drink = drinkArr[i];
-			System.out.printf("%d. %s (%,d원)\n",i+1, drink.nm, drink.price);
+			str = String.format("%d. %s (%,d원)",i+1, drink.nm, drink.price);
+			System.out.println(str);
 		}
 	}
 	
