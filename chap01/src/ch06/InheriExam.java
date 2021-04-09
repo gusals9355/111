@@ -13,12 +13,6 @@ public class InheriExam {
 class Animal extends Object{
 	String name;
 	int age;
-	
-	public Animal(String name, int age) {
-		super();
-		this.name = name;
-		this.age = age;
-	}
 
 	void howling() {
 		System.out.println("운다");
@@ -26,10 +20,6 @@ class Animal extends Object{
 }
 
 class Cat extends Animal{
-	
-	Cat(){
-		super("ㅁㄴㅇ", 4);
-	}
 	
 	void lick() {
 		System.out.printf("%s가 핥다\n",name);

@@ -29,4 +29,4 @@ class NumBox{
 		return this.getNum() == temp.num;
 	}
 	
-}
+}																																					
