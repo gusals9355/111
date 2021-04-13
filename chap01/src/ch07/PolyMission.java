@@ -18,6 +18,8 @@ public class PolyMission {
 	
 	public static void blowKlaxon(Car c) {
 		if(c instanceof Bus) {
+//			Bus b = (Bus)c;
+//			b.openDoor();
 			((Bus)c).openDoor();
 			return;
 		}else {
