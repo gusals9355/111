@@ -28,7 +28,7 @@ SELECT * FROM membertbl;
 SELECT * FROM producttbl;
 SELECT * FROM producttbl WHERE company = '삼성';
 SELECT * FROM membertbl WHERE membername = '지운이';
-SELECT * FROM producttbl WHERE cost >= 10;
+SELECT cost FROM producttbl WHERE cost >= 10;
 
 DROP TABLE t_exam;
 
@@ -69,6 +69,8 @@ SELECT FIRST_name "fname" FROM indextbl;
 DESC titles;
 SELECT * FROM titles
 WHERE emp_no >= 10600;
+
+
 
 SELECT * FROM titles
 WHERE emp_no >= 10600 and title = 'staff';
@@ -159,12 +161,11 @@ SELECT * FROM salaries;
 
 SELECT emp_no, AVG(salary) "평균급여" FROM salaries
 GROUP BY emp_no
-HAVING 평균급여 >=
- 90000
+HAVING 평균급여 >= 90000
 ORDER BY 평균급여;
 
 SELECT * FROM titles;
-#가장 많은 인원이 있는 title이 무엇인지 표시 페코드 하나만 나오면됨
+#가장 많은 인원이 있는 title이 무엇인지 표시 레코드 하나만 나오면됨
 SELECT max(count(emp_no)) FROM titles
 GROUP BY title
 order BY COUNT(emp_no);
@@ -174,5 +175,13 @@ GROUP BY title
 order BY COUNT(emp_no) DESC
 LIMIT 1;
 
+SELECT title FROM titles
+GROUP BY title
+HAVING COUNT(title) = (SELECT MAX(COUNT(title)) FROM titles
+GROUP BY title;
+
 SELECT * FROM employees
 WHERE 
+
+
+
