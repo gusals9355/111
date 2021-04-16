@@ -158,3 +158,9 @@ SELECT REPLACE('       안   녕     ',' ' , '!'); -- 공백을 !로 치환
 SELECT MID(birth_date,6,2) FROM employees;
 SELECT birth_date, CAST( SUBSTRING(birth_date,6 ,2) AS INT) FROM employees;
 
+SELECT CEILING(4.7);
+SELECT CEIL(4.7);
+SELECT ROUND(10.6);
+SELECT ROUND(10.4);
+SELECT FLOOR(10.9);
+

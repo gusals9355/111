@@ -160,7 +160,7 @@ order BY COUNT(salary) DESC, AVG(salary) DESC;
 SELECT * FROM salaries;
 
 SELECT emp_no, AVG(salary) "평균급여" FROM salaries
-GROUP BY emp_no
+GROUP BY emp_noas
 HAVING 평균급여 >= 90000
 ORDER BY 평균급여;
 
@@ -178,10 +178,8 @@ LIMIT 1;
 SELECT title FROM titles
 GROUP BY title
 HAVING COUNT(title) = (SELECT MAX(COUNT(title)) FROM titles
-GROUP BY title;
+GROUP BY title);
 
 SELECT * FROM employees
-WHERE 
-
-
+WHERE gender = 'F' AND first_name like 'S%' AND hire_date >= '1990-01-01';
 
