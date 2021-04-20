@@ -134,7 +134,4 @@ ON a.iboard = b.iboard;
 
 SELECT a.iboard, a.title, a.ctnt, b.ctnt FROM t_board a
 LEFT JOIN t_cmt b
-ON a.iboard = b.iboard
-WHERE b.icmt IS null;
-
-
+ON a.iboard = b.iboard;
